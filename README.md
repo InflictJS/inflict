@@ -1,0 +1,3 @@
+# inflict
+
+Making Discord Easier!
