@@ -107,3 +107,7 @@ dist
 .config/
 .replit
 replit.nix
+
+# Testing
+views/
+public/
