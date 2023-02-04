@@ -2,9 +2,9 @@
   "name": "inflict",
   "version": "1.0.0",
   "description": "Making Discord Easier!",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsc src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/InflictJS/inflict/issues"
   },
-  "homepage": "https://github.com/InflictJS/inflict#readme"
+  "homepage": "https://github.com/InflictJS/inflict#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "tsc": "^2.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18"
+  }
 }
