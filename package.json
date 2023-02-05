@@ -2,9 +2,15 @@
   "name": "inflict",
   "version": "1.0.0",
   "description": "Making Discord Easier!",
-  "main": "dist/index.js",
+  "main": "dist/esm/index.js",
+  "exports": {
+    "import": "./dist/esm/index.js",
+    "require": "./dist/cjs/index.js"
+  },
+  "type": "module",
   "scripts": {
-    "dev": "tsc src/index.ts"
+    "build": "tsc --project tsconfig.esm.json & tsc --project tsconfig.cjs.json",
+    "dev": "node index.test.js"
   },
   "repository": {
     "type": "git",
@@ -20,10 +26,20 @@
   },
   "homepage": "https://github.com/InflictJS/inflict#readme",
   "dependencies": {
+    "chalk": "4.1.2",
     "fs": "^0.0.1-security",
-    "tsc": "^2.0.4"
+    "tsc": "^2.0.4",
+    "typescript": "^4.9.5"
   },
   "devDependencies": {
     "@types/node": "^18.11.18"
-  }
+  },
+  "types": "./dist/types/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "*.test.js"
+  ]
 }
