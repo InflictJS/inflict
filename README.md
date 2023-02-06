@@ -18,13 +18,13 @@ Create an express server and render an `html` template that is **not** the `expr
 
 ```js
 import { render } from 'inflict'
-const express = require('express')
+import express from 'express'
 const app = express()
 
 app.use(express.static('public'))
 
 app.get('/', async (req, res) => {
-  res.send(render('views', 'index.html', { message: 'Hello!' })) // views/index.html is rendered
+  res.send(render('views', '', { message: 'Hello!' })) // views/index.html is rendered
 })
 
 app.listen(3000)
