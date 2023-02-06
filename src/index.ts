@@ -1,5 +1,7 @@
 import * as fs from 'fs'
-import * as chalk from 'chalk'
+import { Chalk } from 'chalk'
+
+const chalk = new Chalk()
 
 function type(data): string {
   return Object.prototype.toString.call(data).slice(8, -1)

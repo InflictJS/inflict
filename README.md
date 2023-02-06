@@ -17,6 +17,7 @@ const inflict = require('inflict')
 Create an express server and render an `html` template that is **not** the `express.static()` folder. 
 
 ```js
+import { render } from 'inflict'
 const express = require('express')
 const app = express()
 
