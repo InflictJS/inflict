@@ -1,7 +1,7 @@
 {
   "name": "inflict",
   "version": "1.0.0",
-  "description": "Making Discord Easier!",
+  "description": "A flexible web framework",
   "main": "dist/esm/index.js",
   "exports": {
     "import": "./dist/esm/index.js",
@@ -19,7 +19,7 @@
   "keywords": [
     "framework"
   ],
-  "author": "",
+  "author": "intfract",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/InflictJS/inflict/issues"

@@ -1,6 +1,6 @@
 # Inflict
 
-A server-side HTML rendering web framework!
+A flexible HTML web framework!
 
 ## Import
 
