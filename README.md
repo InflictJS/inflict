@@ -32,8 +32,7 @@ app.listen(3000)
 
 Templates are placed inside `#{}` hash brackets that return strings as plain text. 
 > **Warning**
-> The `eval()` function has been disabled because it is unsafe 
-> Client-side JavaScript can not be rendered like `document` 
+> The `eval()` function has been disabled because it is unsafe and client-side JavaScript can not be rendered like `document` 
 
 ```html
 <!DOCTYPE html>
