@@ -1,7 +1,4 @@
 import * as fs from 'fs'
-import { Chalk } from 'chalk'
-
-const chalk = new Chalk()
 
 function type(data): string {
   return Object.prototype.toString.call(data).slice(8, -1)
@@ -36,7 +33,7 @@ function execute(code: string, locals: Record<string, any>, dir: string) {
     let output = forge(null, null, null, Object, (file) => render(dir, file, locals))
     return output
   } catch (e) {
-    console.log(chalk.red(e))
+    console.log(e)
     return ''
   }
 }
@@ -48,7 +45,7 @@ function render(dir: string = 'views', file: string, locals: Record<string, any>
   const matches = Array.from(html.matchAll(/#{(.|\n)+?}/g))
   for (let i = 0; i < matches.length; i++) {
     const match = matches[i]
-    console.log(chalk.hex('#39e68f').visible(`Matched: ${match[0]}`))
+    console.log(`Matched: ${match[0]}`)
     html = html.replace(match[0], execute(match[0], locals, dir))
   }
   return html
