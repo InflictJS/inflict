@@ -45,7 +45,7 @@ function render(dir: string = 'views', file: string, locals: Record<string, any>
   const matches = Array.from(html.matchAll(/#{(.|\n)+?}/g))
   for (let i = 0; i < matches.length; i++) {
     const match = matches[i]
-    console.log(`Matched: ${match[0]}`)
+    console.log(`\x1b[32mMatched: ${match[0]}`)
     html = html.replace(match[0], execute(match[0], locals, dir))
   }
   return html

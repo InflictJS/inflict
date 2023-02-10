@@ -8,13 +8,21 @@ A flexible HTML web framework!
 npm install inflict
 ```
 
+### ESM 
+
 ```js
-const inflict = require('inflict')
+import { render } from 'inflict'
+```
+
+### CJS
+
+```js
+const { render } = require('inflict')
 ```
 
 ## Get Started
 
-Create an express server and render an `html` template that is **not** the `express.static()` folder. 
+Create an express server and render an `html` template that is **not** in the `express.static()` folder. 
 
 ```js
 import { render } from 'inflict'

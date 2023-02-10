@@ -3,14 +3,14 @@
   "version": "1.3.0",
   "description": "A flexible web framework",
   "main": "dist/esm/index.js",
+  "type": "module",
   "exports": {
     "import": "./dist/esm/index.js",
     "require": "./dist/cjs/index.cjs"
   },
-  "type": "module",
   "scripts": {
-    "build": "tsc --project tsconfig.esm.json & tsc --project tsconfig.cjs.json",
-    "dev": "node index.test.js"
+    "build": "tsc --project tsconfig.esm.json & tsc --project tsconfig.cjs.json\nnode build.node.js",
+    "dev": "node index.test.mjs"
   },
   "repository": {
     "type": "git",
@@ -20,13 +20,12 @@
     "framework"
   ],
   "author": "intfract",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/InflictJS/inflict/issues"
   },
   "homepage": "https://github.com/InflictJS/inflict#readme",
   "dependencies": {
-    "chalk": "^5.2.0",
     "express": "^4.18.2",
     "fs": "^0.0.1-security",
     "tsc": "^2.0.4",
@@ -41,6 +40,7 @@
   ],
   "exclude": [
     "node_modules",
-    "*.test.js"
+    "*.test.*",
+    "*.node.*"
   ]
 }

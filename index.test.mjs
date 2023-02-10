@@ -1,4 +1,4 @@
-import { render } from 'inflict'
+import { render } from './dist/esm/index'
 import express from 'express'
 const app = express()
 
