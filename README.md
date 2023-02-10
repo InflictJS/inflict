@@ -4,9 +4,14 @@ A flexible HTML web framework!
 
 ## Import
 
+Install `inflict` with [npm](https://npmjs.com/package/inflict).
+
 ```sh
 npm install inflict
 ```
+
+> **Note**
+> This package uses ESM by default but supports CJS 
 
 ### ESM 
 

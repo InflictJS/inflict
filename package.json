@@ -1,11 +1,11 @@
 {
   "name": "inflict",
-  "version": "1.3.0",
+  "version": "2.0.0",
   "description": "A flexible web framework",
-  "main": "dist/esm/index.js",
+  "main": "dist/esm/index.mjs",
   "type": "module",
   "exports": {
-    "import": "./dist/esm/index.js",
+    "import": "./dist/esm/index.mjs",
     "require": "./dist/cjs/index.cjs"
   },
   "scripts": {

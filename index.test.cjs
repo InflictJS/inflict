@@ -1,4 +1,5 @@
-const { render } = require('./dist/cjs/index')
+const { render } = require('./dist/cjs/index.cjs')
+const express = require('express')
 const app = express()
 
 app.use(express.static('public'))
