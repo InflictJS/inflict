@@ -3,7 +3,6 @@
     "module": "CommonJS",
     "noImplicitAny": false,
     "removeComments": true,
-    "preserveConstEnums": true,
     "sourceMap": true,
     "allowJs": true,
     "outDir": "dist/cjs",

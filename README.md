@@ -37,26 +37,30 @@ const app = express()
 app.use(express.static('public'))
 
 app.get('/', async (req, res) => {
-  res.send(render('views', '', { message: 'Hello!' })) // views/index.html is rendered
+  res.send(render('views', '', { message: 'Hello!', todo: ['Eat', 'Code'] })) // views/index.html is rendered
 })
 
 app.listen(3000)
 ```
 
-Templates are placed inside `#{}` hash brackets that return strings as plain text. 
+Templates are placed inside `#{}#` hash brackets that return strings as plain text. 
 > **Warning**
-> The `eval()` function has been disabled because it is unsafe and client-side JavaScript can not be rendered like `document` 
+> Do not use `//` to comment or line breaks because code is evaluated in a single line
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  #{ include('meta.html') }
+  #{ include('meta.html') }#
   <title>Inflict</title>
+  #{ include('cdn.html') }#
 </head>
 <body>
   <main>
-    #{ message }
+    #{ message }#
+    <ul>
+      #{ loop(todo, (item, i) => element('li', item, { class: 'item' })) }#
+    </ul>
   </main>
 </body>
 </html>
