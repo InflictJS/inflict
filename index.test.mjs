@@ -8,4 +8,8 @@ app.get('/', async (req, res) => {
   res.send(render('views', '', { message: 'Hello!', todo: ['Eat', 'Code'] })) // views/index.html is rendered
 })
 
+app.get('/next', async (req, res) => {
+  res.send(render('views/next', '', {}))
+})
+
 app.listen(3000)

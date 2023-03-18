@@ -65,3 +65,26 @@ Templates are placed inside `#{}#` hash brackets that return strings as plain te
 </body>
 </html>
 ```
+
+## File Inclusion Syntax
+
+Relative paths are used by default. Absolute paths using `$` refer to the first folder `views` unless specified when using the `render()` function. This feature is useful because `render()` carries over the `dir` parameter when using `include()` in templates. 
+
+```html
+<!-- views/page/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inflict</title>
+</head>
+<body>
+  <!-- views/widget.html -->
+  #{ include('$widget.html') }#
+  <!-- coming soon... -->
+  <script src="$script.js"></script>
+</body>
+</html>
+```

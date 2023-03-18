@@ -46,8 +46,14 @@ function execute(code: string, locals: Record<string, any>, dir: string) {
 }
 
 function render(dir: string = 'views', file: string, locals: Record<string, any>): string {
+  const root = '$'
+  if (file.startsWith(root)) {
+    dir = dir.split('/')[0]
+    file = file.replace(root, '')
+  }
   if (!file) file = 'index.html'
   if (!file.endsWith('.html')) file += '.html'
+  console.log(dir, file)
   let html = fs.readFileSync(`${dir}/${file}`, 'utf-8')
   const matches = Array.from(html.matchAll(/#{(.|\n)+?}#/g))
   for (let i = 0; i < matches.length; i++) {
